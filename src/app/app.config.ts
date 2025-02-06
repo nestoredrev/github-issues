@@ -7,12 +7,14 @@ import {
   QueryClient,
   withDevtools,
 } from '@tanstack/angular-query-experimental'
+import { provideMarkdown } from 'ngx-markdown';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     //provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
     provideExperimentalZonelessChangeDetection(), // aplicar zoneless
-    provideTanStackQuery(new QueryClient(), withDevtools())
+    provideTanStackQuery(new QueryClient(), withDevtools()),
+    provideMarkdown()
   ]
 };

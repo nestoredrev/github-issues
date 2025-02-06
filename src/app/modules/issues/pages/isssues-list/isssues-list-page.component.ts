@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { IssuesService } from '../../services/issues.service';
 import { LabelsSelectorComponent } from "../../components/labels-selector/labels-selector.component";
+import { IssueItemComponent } from "../../components/issue-item/issue-item.component";
 
 @Component({
   selector: 'app-isssues-list-page',
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
-    LabelsSelectorComponent
+    LabelsSelectorComponent,
+    IssueItemComponent
 ],
   templateUrl: './isssues-list-page.component.html'
 })
@@ -20,6 +20,10 @@ export default class IsssuesListPageComponent {
 
   get labelsQuery() {
     return this.issueService.labelsQuery;
+  }
+
+  get issuesQuery() {
+    return this.issueService.issuesQuery;
   }
   
 }

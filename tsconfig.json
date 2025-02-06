@@ -5,7 +5,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@helpers/*":["src/app/helpers/*"]
+      "@helpers/*":["src/app/helpers/*"],
+      "@environments/*":["src/environments/*"]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
