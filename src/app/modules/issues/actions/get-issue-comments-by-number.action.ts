@@ -9,7 +9,7 @@ const GITHUB_TOKEN = environment.gitHubToken;
 
 export const getIssueCommentsByNumber = async ( issueNumber:string ):Promise<GitHubIssuesResponse[]> => {
 
-    await sleep(1500);
+    // await sleep(1500);
 
     try {
 

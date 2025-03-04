@@ -17,7 +17,7 @@ export const getIsues = async ( state:State = State.All, selectedLabels: string[
     }
 
 
-    await sleep(1500);
+    // await sleep(1500);
 
     try {
 

@@ -9,7 +9,7 @@ const GITHUB_TOKEN = environment.gitHubToken;
 
 export const getLabels = async ():Promise<GitHubLabelResponse[]> => {
 
-    await sleep(1500);
+     //await sleep(1500);
 
     try {
 
@@ -25,7 +25,6 @@ export const getLabels = async ():Promise<GitHubLabelResponse[]> => {
         if ( !resp.ok ) throw "Response error to get labels";
 
         const labels: GitHubLabelResponse[] = await resp.json();
-        console.log("🚀 ~ getLabels ~ labels:", labels)
 
         return labels;
 
